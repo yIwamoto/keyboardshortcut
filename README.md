@@ -1,2 +1,2 @@
-# keyboardshortcut
-javascript keyboard short cut
+# Keyboard Shortcut
+pure javascriptで作成したキーボードショートカットです。

@@ -1,0 +1,38 @@
+<html>
+<head>
+<title>keyboard shortcut example</title>
+<script type="text/javascript" src="./keyboardshortcut.js"></script>
+<script type="text/javascript">
+
+const eventItems = [
+    { key: 'a', action: () => alert('keydown a') },
+    { key: 'A', action: () => console.log('keydown A') },
+    { key: 'c', action: () => console.log('keydown c') },
+    { key: 'Ctrl + a', action: () => console.log('keydown Ctrl + a') },
+    { key: 'ArrowUp', action: () => console.log('keydown ↑') },
+    { key: 'ArrowDown', action: () => console.log('keydown ↓') },
+    { key: 'ArrowLeft', action: () => console.log('keydown ←') },
+    { key: 'ArrowRight', action: () => console.log('keydown →') },
+    { key: 'Enter', action: () => console.log('keydown Enter') },
+    { key: 'Escape', action: () => console.log('keydown Escape') },
+    { key: 'Backspace', action: () => console.log('keydown Backspace') },
+];
+
+document.addEventListener("DOMContentLoaded", function(){
+    const regist = document.querySelector('#regist');
+    regist.addEventListener('click', function() {
+        jsUtil.KeyBoardShortCut.regist(eventItems);
+    });
+    const unregist = document.querySelector('#unregist');
+    unregist.addEventListener('click', function() {
+        jsUtil.KeyBoardShortCut.unregist();
+    });
+});
+</script>
+</head>
+<body>
+<p>「適用」ボタンをクリックするとショートカットが適用されます。</p>
+<button id="regist">適用</button>
+<button id="unregist">解除</button>
+</body>
+</html>
